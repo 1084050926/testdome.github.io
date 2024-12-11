@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>下载我们的APP</title>
+  <style>
+    /* 基本样式 */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin: 0.5em 0;
+    }
+
+    p {
+      font-size: 1rem;
+      margin: 1em 0;
+    }
+
+    .download-btn {
+      display: inline-block;
+      margin-top: 1em;
+      padding: 0.8em 1.5em;
+      font-size: 1rem;
+      color: #fff;
+      background-color: #ff5722;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .download-btn:hover {
+      background-color: #e64a19;
+      transform: translateY(-2px);
+    }
+
+    .logo {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 1em;
+    }
+
+    .container {
+      max-width: 90%;
+    }
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // iOS 应用商店链接
+      const iosLink = "https://apps.apple.com/app/id123456789"; // 替换为你的应用商店链接
+
+      // 安卓 APK 下载链接
+      const androidLink = "https://yourwebsite.com/download/app.apk"; // 替换为你的安卓下载链接
+
+      // 获取用户设备信息
+      const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+      // 判断设备类型并跳转
+      if (/iPhone|iPad|iPod/i.test(userAgent)) {
+        window.location.href = iosLink;
+      } else if (/Android/i.test(userAgent)) {
+        window.location.href = androidLink;
+      } else {
+        document.getElementById("message").textContent =
+          "请使用移动设备访问此页面以下载应用。";
+        document.getElementById("download-btn").style.display = "none";
+      }
+    });
+  </script>
+</head>
+<body>
+  <div class="container">
+    <!-- 应用Logo -->
+    <img class="logo" src="https://via.placeholder.com/80" alt="App Logo">
+    
+    <!-- 标题 -->
+    <h1>下载我们的APP</h1>
+    
+    <!-- 描述 -->
+    <p>快速、可靠、便捷！随时随地访问我们的服务。</p>
+    
+    <!-- 提示信息 -->
+    <p id="message">正在为您识别设备类型...</p>
+    
+    <!-- 下载按钮 -->
+    <a id="download-btn" class="download-btn" href="#">立即下载</a>
+  </div>
+</body>
+</html>

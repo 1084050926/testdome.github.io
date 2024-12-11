@@ -69,6 +69,7 @@
 
       // 获取用户设备信息
       const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+console.log(userAgent,'userAgent---');
 
       // 判断设备类型并跳转
       if (/iPhone|iPad|iPod/i.test(userAgent)) {
@@ -85,20 +86,7 @@
 </head>
 <body>
   <div class="container">
-    <!-- 应用Logo -->
-    <img class="logo" src="https://via.placeholder.com/80" alt="App Logo">
-    
-    <!-- 标题 -->
-    <h1>下载我们的APP</h1>
-    
-    <!-- 描述 -->
-    <p>快速、可靠、便捷！随时随地访问我们的服务。</p>
-    
-    <!-- 提示信息 -->
-    <p id="message">正在为您识别设备类型...</p>
-    
-    <!-- 下载按钮 -->
-    <a id="download-btn" class="download-btn" href="#">立即下载</a>
+   
   </div>
 </body>
 </html>
